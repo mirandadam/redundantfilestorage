@@ -30,7 +30,7 @@ Specifically:
 - machine will lock up, unresponsive to CTRL+ALT+DEL, alt+f2 and the like.
 - I did not test what happens to the data after a hard reset.
   
-I know, this test is a bit too extreme, but that is similar to the condition I expect to find if I mount remote disks over iscsi and one of them disconnects temporarily. I want the rest of my array to heal and resize gracefully, and if the extra disk is reconnected, I want to be able to recover the capacity by adding it back, correctly handling the inconsistent btrfs state the reconnected media is.
+I know, this test is a bit too extreme, but that is similar to the condition I expect to find if I mount remote disks over iscsi and one of them disconnects temporarily. I want the rest of my array to heal and resize gracefully, and if the extra disk is reconnected, I wanted to be able to recover the capacity by adding it back, correctly handling the inconsistent btrfs state of the reconnected media.
 
 
 # Requirements for an alternate solution

@@ -48,7 +48,7 @@ For example, chunks may be stored in regular files and metadata in a sqlite data
 * gracefully handle device reconnects during self healing. If a volume with N=10 and M=3 suffers a device disconnect, the volume may have a grace time to try to reconnect (this will deny service by holding reads and writes while trying to reconnect) then it will begin to self heal. If the device reconnects right after, gracefully handle that (ideally it should try to use as much as possible of the data already on the volume).
 * support custom tests or metrics to voluntarily flag a device as bad (too many failed consistency checks, too many disconnects, too much latency, etc.)
 * support data and metadata checksums
-* support assimetric devices on the same volume (low/high latency, low/high bandwidth, different capacities).
+* support assymetric devices on the same volume (low/high latency, low/high bandwidth, different capacities).
 * gracefully decrease redundancy level and self rebuild when a drive fails. For example, in a volume where N=3 (3 devices) and N=2 (2 drives can fail and data can be preserved), if a device fail the volume will be rebuilt with N=1. Or if M=4, N=2 and a drive fails but the data in the array cannot be held with one drive capacity, the volume degrades to M=3, N=1.
 * provide a means to push alerts of degradation
 * dead simple to deploy. Much simpler than hdfs or ceph. Ideally a single executable with a configuration file. Multiple deployments with the same configuration file would generate a multimaster redundant service.

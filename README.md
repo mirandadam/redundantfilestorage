@@ -64,3 +64,7 @@ For example, chunks may be stored in regular files and metadata in a sqlite data
 * support mounting snapshots read-only.
 * support snapshot rollback.
 * support intermediary snapshot deletion.
+
+# random notes
+
+snapraid seems to have the desired features, need to look into that.
